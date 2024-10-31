@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Use Inter font */
+    line-height: 1.3; /* Tighter line height for a more compact feel */
+    background-color: hwb(0 100% 0%);
+    color: #333;
+}
+
+.container {
+    width: 90%; /* Wider percentage for more space */
+    max-width: 800px; /* Increased max-width for better layout */
+    margin: 10px; /* Remove auto margin for left alignment */
+    padding-top: 65px; /* Added 30px from the top */
+    padding-left: 60px; /* Increased left margin to 50px */
+    padding-right: 20px; /* Space from right */
+}
+
+h1 {
+    font-size: 4.5em; /* Increased font size */
+    font-weight: bold; /* Bold for the heading */
+    color: #000000;
+    margin-bottom: 35px; /* Reduce bottom margin */
+    margin-top: 0; /* Reset margin-top to let container's padding take effect */
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+p {
+    font-size: 1.8em; /* Increased font size for paragraphs */
+    color: #777777; /* Darker grey for subtext */
+    margin-bottom: 45px; /* Reduced bottom margin for tighter spacing */
+    text-align: left; /* Ensure text is left-aligned */
+    font-weight: 500; /* Increased boldness for subtext */
+    letter-spacing: -0.02em; /* Tighter letter spacing for paragraphs */
+}
+
+h2 {
+    font-size: 3em; /* Increased font size for subheadings */
+    margin-top: 32px;
+    margin-bottom: 45px;
+    color: #222; /* Black bold for headings */
+    font-weight: 600; /* Semibold for headings */
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4em; /* Adjust size for mobile */
+    }
+
+    h2 {
+        font-size: 2.5em; /* Adjust size for mobile */
+    }
+
+    p {
+        font-size: 1.2em; /* Adjust paragraph size for mobile */
+    }
+
+    .container {
+        width: 100%; /* Full width on mobile */
+        padding: 10px; /* Add padding for mobile */
+    }
+}
