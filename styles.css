@@ -1,73 +1,167 @@
+* {
+    box-sizing: border-box; /* Prevent overflow from padding/borders */
+}
+
+html, body {
+    overflow-x: hidden; /* Avoid horizontal clipping */
+}
+
 body {
     font-family: 'Inter', sans-serif; /* Use Inter font */
     line-height: 1.5; /* Slightly tighter line height for better spacing */
-    background-color: hwb(0 100% 0%);
-    color: #333;
+    background-color: #ffffff; /* Pure white background */
+    color: #666666; /* Lighter grey text for softer look */
+}
+
+/* Top Navigation */
+.top-nav {
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+
+.nav-link {
+    color: #0066cc; /* Blue links */
+    text-decoration: underline;
+    font-size: 1em; /* Bigger font size */
+    font-weight: 500;
+    margin-right: 25px; /* More spacing between links */
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #004499; /* Darker blue on hover */
 }
 
 .container {
     width: 90%; /* Wider percentage for more space */
-    max-width: 500px; /* Increased max-width for better layout */
+    max-width: 600px; /* Better width for readability */
     margin: 10px; /* Remove auto margin for left alignment */
     padding-top: 35px; /* Added 30px from the top */
     padding-left: 30px; /* Increased left margin to 50px */
     padding-right: 20px; /* Space from right */
+    position: relative; /* For positioning the case studies link */
 }
+
+/* Removed case studies button - now in navigation */
 
 h1 {
     font-size: 2.9em; /* Reduced font size by 40% */
     font-weight: bold; /* Bold for the heading */
-    color: #000000;
+    color: #000000; /* Black heading */
     margin-bottom: 18px; /* Reduced bottom margin for tighter spacing */
     margin-top: 0; /* Reset margin-top to let container's padding take effect */
     text-align: left; /* Ensure text is left-aligned */
+    text-transform: lowercase; /* Convert to small caps */
 }
 
 p {
     font-size: 1.2em; /* Reduced font size by 40% */
-    color: #777777; /* Darker grey for subtext */
+    color: #666666; /* Lighter grey for softer look */
     margin-bottom: 25px; /* Reduced bottom margin for tighter spacing */
     text-align: left; /* Ensure text is left-aligned */
-    font-weight: 500; /* Increased boldness for subtext */
+    font-weight: 400; /* Normal weight */
     letter-spacing: -0.029em; /* Slightly relaxed letter spacing */
+    overflow-wrap: anywhere; /* Wrap very long words/links */
+    text-transform: lowercase; /* Convert to small caps */
+    opacity: 0.9; /* Slightly reduced opacity */
 }
 
 h2 {
     font-size: 1.8em; /* Reduced font size for subheadings */
     margin-top: 20px; /* Reduced top margin for h2 */
     margin-bottom: 30px; /* Reduced bottom margin for h2 */
-    color: #222; /* Black bold for headings */
+    color: #000000; /* Black bold for headings */
     font-weight: 600; /* Semibold for headings */
     text-align: left; /* Ensure text is left-aligned */
+    text-transform: lowercase; /* Convert to small caps */
+}
+
+h3 {
+    font-size: 1.4em; /* Smaller than h2 */
+    margin-top: 15px; /* Reduced top margin */
+    margin-bottom: 10px; /* Reduced bottom margin */
+    color: #000000; /* Black for headings */
+    font-weight: 600; /* Semibold for headings */
+    text-align: left; /* Ensure text is left-aligned */
+    text-transform: lowercase; /* Convert to small caps */
+    line-height: 1.2; /* Tighter line height for subheadings */
+}
+
+/* Subtext formatting for experience section */
+.experience-item {
+    margin-bottom: 25px; /* Match paragraph spacing */
+}
+
+.experience-item p {
+    margin-bottom: 15px; /* Match main paragraph spacing */
+    padding-left: 0; /* No indentation for main text */
+    line-height: 1.5; /* Match main paragraph line height */
+}
+
+.experience-item .subtext {
+    padding-left: 0; /* No indentation - match main text */
+    margin-bottom: 15px; /* Match main paragraph spacing */
+    font-size: 1.2em; /* Same size as main paragraphs */
+    color: #666666; /* Lighter grey for subtext */
+    line-height: 1.5; /* Match main paragraph line height */
+    font-weight: 400; /* Normal weight like main text */
 }
 
 a {
-    color: #0066cc;
-    text-decoration: none;
-    font-weight: bold;
+    color: #0066cc; /* Standard blue links like reference */
+    text-decoration: underline; /* Underlined like reference */
+    font-weight: bold; /* Bold links like reference */
     text-align: left; /* Ensure text is left-aligned */
+    transition: color 0.2s ease;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #004499; /* Darker blue on hover */
+}
+
+/* Ensure contact image scales on small screens */
+#contact img {
+    max-width: 100% !important;
+    height: auto !important;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2.4em; /* Adjust size for mobile */
-    }
-
-    h2 {
-        font-size: 1.5em; /* Adjust size for mobile */
-    }
-
-    p {
-        font-size: 0.72em; /* Adjust paragraph size for mobile */
+    body {
+        line-height: 1.6; /* Comfortable line height on mobile */
+        background-color: #ffffff; /* Pure white on mobile */
+        color: #333333; /* Dark grey text */
     }
 
     .container {
         width: 100%; /* Full width on mobile */
-        padding: 10px; /* Add padding for mobile */
+        padding: 18px; /* Comfortable padding for mobile */
+        max-width: 100%; /* Full width on mobile */
+    }
+    
+    p {
+        text-align: left; /* Left align on mobile for better readability */
+        line-height: 1.4; /* Slightly tighter on mobile */
+    }
+
+    h1 {
+        font-size: 2.1em; /* Comfortable for mobile */
+        letter-spacing: -0.01em;
+    }
+
+    h2 {
+        font-size: 1.25em; /* Comfortable subheading */
+        margin-bottom: 18px;
+    }
+
+    p {
+        font-size: 0.95em; /* Readable paragraph size on mobile */
+        margin-bottom: 16px;
+    }
+
+    /* Navigation links responsive */
+    .nav-link {
+        font-size: 0.9em; /* Slightly smaller on mobile */
+        margin-right: 20px; /* Less spacing on mobile */
     }
 }
